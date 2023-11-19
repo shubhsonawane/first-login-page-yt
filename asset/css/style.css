@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+
+.login-container {
+  width: 350px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(20, 20, 20, 0.1);
+  border-radius: 5px;
+}
+.login-container h3 {
+  text-align: center;
+  font-size: 25px;
+}
+.login-container .text-field {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+.login-container .text-field input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  font-size: 16px;
+  height: 40px;
+}
+.login-container label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #adadad;
+  pointer-events: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.login-container .text-field input:focus ~ label,
+.login-container .text-field input:valid ~ label {
+  top: -5px;
+  color: #9f239f;
+}
+.login-container button {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background: #196edeea;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+}
+.login-container button:focus {
+  border: none;
+  outline: none;
+  background: #0d54b0;
+}
+.login-container .text-field i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  color: #353535;
+}
+
+
+@media (max-width:480px){
+    .login-container{
+        width: 95%;
+    }
+}
